@@ -157,7 +157,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 CSRF_TRUSTED_ORIGINS = ['http://*','https://web-production-8ca5.up.railway.app']
 
-AUTH_USER_MODEL = 'ModeloGreenMarket.User'
+AUTH_USER_MODEL = 'PruebaNube.User'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
