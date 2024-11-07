@@ -1,0 +1,50 @@
+version: "3.1"
+
+intents:
+  - saludo
+  - goodbye
+  - bot_challenge
+  - pregunta_producto
+  - pregunta_recomendacion
+  - cuidado_plantas
+  - recomendacion_plantas
+  - identify_plant
+  - get_plant_info
+  - greet
+  - ask_about_plants
+  - ask_plant_care
+
+entities:
+  - plant_name
+
+
+
+slots:
+  plant_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: plant_name
+
+
+responses:
+  utter_greet:
+    - text: "¡Hola! ¿En qué puedo ayudarte hoy?"
+  utter_goodbye:
+    - text: "¡Hasta luego! Cuida de tus plantas."
+  utter_iamabot:
+    - text: "Soy un bot aquí para ayudarte con tus preguntas sobre plantas."
+  utter_ask_about_plants:
+    - text: "¿Qué planta te gustaría conocer?"
+  utter_ask_plant_care:
+    - text: "¿Sobre qué planta te gustaría saber más? Por favor, menciona el nombre."
+  utter_ask_product_recommendation:
+    - text: "¿Qué tipo de planta te gustaría recomendar?"
+  utter_ask_plant_name:
+    - text: "¿Podrías decirme el nombre de la planta que quieres conocer?"
+
+actions:
+  - action_get_plant_info
+  - utter_greet
+  - utter_goodbye
+  - utter_iamabot

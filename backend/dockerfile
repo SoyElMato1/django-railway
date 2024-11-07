@@ -1,0 +1,22 @@
+# Dockerfile para el backend
+FROM python:3.10
+# Usa la versión de Python adecuada para el backend
+
+# Establece el directorio de trabajo en el contenedor
+WORKDIR /app
+
+# Copia el archivo de dependencias e instálalas
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copia el código del backend en el contenedor
+COPY . .
+
+# Recopila los archivos estáticos (para producción)
+RUN python manage.py collectstatic --noinput
+
+# Expone el puerto 8000 (o usa el valor asignado por Railway en el entorno)
+EXPOSE 8000
+
+# Comando para iniciar el backend con Gunicorn
+CMD ["gunicorn", "backend.wsgi:application", "--bind", "0.0.0.0:8000"]

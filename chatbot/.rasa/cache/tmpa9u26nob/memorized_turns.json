@@ -1,0 +1,13 @@
+{
+  "lookup": {
+    "eJyLrq6NBQAEOAGx": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEoBqDO9NK8kMb6gKD+lNLkkv7Y2FgBVAyCj": "utter_ask_about_plants",
+    "eJyNjEEKgDAMBL/SB/iCfkUkxBqkqGlpN16Kf7egd73twOyM7Rpcy0VO4oCY1Lv2DFI+xLsX9lgh2l2rUroTtSO868/VFEy5pMUC0vXRM0AKcd2I52SgvLOi/gpPN63RQ2Y=": "action_listen",
+    "eJytjkEKwzAMBL/iB/QF/kooQnFEMUkkI0u9GP+9gvbeHHLbgdlllzEfaTSlN2CxKpzT+AZgPCmnHxy1G3G43knDqRxoOUXz5WwITWXzYjL/7LkZKWDfAVdxg3YgW79h+OpRpSIn8YYl9DmfH3f7ZD8=": "utter_recomendar_producto_similar",
+    "eJytjssJAzEMRFtxAVuBWwmLULwimNiy0ScXs73HkLDX+JCbBt6M3m2cWxhd6AWYLDeOYXwOYKwUwzeUrEY8WVeSyWSe0WKYzYezIXRphydr5489NyMB1CfgvblBL8imfxheFRVKrRIfmCa+ZntV5LIBzTUXlPVH+xsFl41+": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohuTQzJTElP74gJzGvJLG4tjYWABHUH5k=": "utter_ask_plant_care",
+    "eJyNjEEKwCAMBL+SB/QFfqWUEDSHUBtFYy/i3yvYe3vbgdnZ+9ig58I3kjdJ6qCvgUoXO3ghSjXW6bbKZTqiE82BbxIoJMyR1KiOj1oz44JUz3VAT4V/RI8H/rVAXw==": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEqhKDU5Pzc1LyUxGaSqICcxrySxuLY2FgDXyiIX": "utter_ask_product_recommendation",
+    "eJyNjUEOgCAMBL/CA3wBXzGmabAHIhRSihfi3wX0rredZDK7tmsxLQudgE59YmvaM4AxkjUvBF+UuLu1kHTHc0e1RsilSLyjG1YOyIrl+mhWVRLAckCWtFenMDOzM7TfN9sNqEZKdw==": "action_listen"
+  }
+}

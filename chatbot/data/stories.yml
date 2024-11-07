@@ -1,0 +1,25 @@
+version: "3.1"
+
+stories:
+
+- story: consultar planta
+  steps:
+  - intent: get_plant_info
+    entities:
+      - plant_name
+  - action: action_get_plant_info
+
+- story: saludo
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: despedida
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: bot desafiante
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
