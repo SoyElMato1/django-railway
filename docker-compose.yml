@@ -20,5 +20,3 @@ services:
       - "5055:5055"  # Puerto para las acciones de Rasa
     environment:
       - RASA_ENV=production
-    depends_on:
-      - backend
