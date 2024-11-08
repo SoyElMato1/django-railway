@@ -3,20 +3,20 @@ services:
   partebackend:
     build:
       context: ./partebackend
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     container_name: backend_service
     ports:
       - "8000:8000"  # Ajusta el puerto según lo necesite el backend
     environment:
       - DJANGO_SETTINGS_MODULE=backend.settings
 
-  chatbot:
-    build:
-      context: ./chatbot
-      dockerfile: dockerfile
-    container_name: chatbot_service
-    ports:
-      - "5005:5005"  # Puerto para Rasa API
-      - "5055:5055"  # Puerto para las acciones de Rasa
-    environment:
-      - RASA_ENV=production
+  # chatbot:
+  #   build:
+  #     context: ./chatbot
+  #     dockerfile: Dockerfile
+  #   container_name: chatbot_service
+  #   ports:
+  #     - "5005:5005"  # Puerto para Rasa API
+  #     - "5055:5055"  # Puerto para las acciones de Rasa
+  #   environment:
+  #     - RASA_ENV=production
