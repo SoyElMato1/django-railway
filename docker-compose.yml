@@ -3,7 +3,7 @@ services:
   backend:
     build:
       context: ./backend
-      dockerfile: Dockerfile
+      dockerfile: dockerfile
     container_name: backend_service
     ports:
       - "8000:8000"  # Ajusta el puerto según lo necesite el backend
@@ -15,7 +15,7 @@ services:
   chatbot:
     build:
       context: ./chatbot
-      dockerfile: Dockerfile
+      dockerfile: dockerfile
     container_name: chatbot_service
     ports:
       - "5005:5005"  # Puerto para Rasa API
