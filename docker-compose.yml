@@ -1,14 +1,14 @@
 version: '3.8'
 services:
-#   backend:
-#     build:
-#       context: ./backend
-#       dockerfile: dockerfile
-#     container_name: backend_service
-#     ports:
-#       - "8000:8000"  # Ajusta el puerto según lo necesite el backend
-#     environment:
-#       - DJANGO_SETTINGS_MODULE=backend.settings
+  partebackend:
+    build:
+      context: ./partebackend
+      dockerfile: dockerfile
+    container_name: backend_service
+    ports:
+      - "8000:8000"  # Ajusta el puerto según lo necesite el backend
+    environment:
+      - DJANGO_SETTINGS_MODULE=backend.settings
 
   chatbot:
     build:
