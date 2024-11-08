@@ -1,28 +1,24 @@
 # Dockerfile para el chatbot
-FROM python:3.10
-# Usa la versión de Python adecuada para Rasa
+FROM python:3.10.0
 
-# Establece el directorio de trabajo en el contenedor
 WORKDIR /app
 
-# Copia el archivo de dependencias e instálalas
+# Copiar requirements.txt e instalar dependencias
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install supervisor  # Para gestionar múltiples procesos
 
-# Copia el código del chatbot en el contenedor
+# Copiar el resto del código
 COPY . .
 
-# Entrena el modelo de Rasa
+# Entrenar el modelo de Rasa
 RUN rasa train
 
-# Expone los puertos que utilizarán Rasa y las acciones
+# Exponer los puertos para Rasa
 EXPOSE 5005 5055
 
-# Usa supervisord para gestionar múltiples procesos (rasa run y rasa actions)
-RUN pip install supervisor
-
-# Copia el archivo de configuración de supervisord
+# Configurar supervisord para ejecutar Rasa y sus acciones
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-# Comando para iniciar supervisord, que se encargará de correr los servicios de Rasa
+# Comando para iniciar supervisord
 CMD ["supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
