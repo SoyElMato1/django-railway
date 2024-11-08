@@ -4,8 +4,7 @@ FROM python:3.10.0
 WORKDIR /app
 
 # Copiar requirements.txt e instalar dependencias
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install rasa
 RUN pip install supervisor  # Para gestionar múltiples procesos
 
 # Copiar el resto del código

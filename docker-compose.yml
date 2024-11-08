@@ -1,6 +1,6 @@
 version: '3.8'
 services:
-  partebackend:
+  backend:
     build:
       context: ./partebackend
       dockerfile: Dockerfile
@@ -10,13 +10,15 @@ services:
     environment:
       - DJANGO_SETTINGS_MODULE=backend.settings
 
-  # chatbot:
-  #   build:
-  #     context: ./chatbot
-  #     dockerfile: Dockerfile
-  #   container_name: chatbot_service
-  #   ports:
-  #     - "5005:5005"  # Puerto para Rasa API
-  #     - "5055:5055"  # Puerto para las acciones de Rasa
-  #   environment:
-  #     - RASA_ENV=production
+  chatbot:
+    build:
+      context: ./chatbot
+      dockerfile: Dockerfile
+    container_name: chatbot_service
+    ports:
+      - "5005:5005"  # Puerto para Rasa API
+      - "5055:5055"  # Puerto para las acciones de Rasa
+    environment:
+      - RASA_ENV=production
+    depends_on:
+      - backend
