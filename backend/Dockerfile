@@ -6,7 +6,7 @@ FROM python:3.10
 WORKDIR /app
 
 # Copia el archivo de dependencias e instálalas
-COPY ./requirements.txt .
+COPY backend/requirements.txt .
 RUN pip install requirements.txt
 
 # Copia el código del backend en el contenedor
