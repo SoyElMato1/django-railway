@@ -1,8 +1,8 @@
 # Dockerfile para el chatbot
 FROM python:3.10.0
 
-# Usa una imagen base de Python
-FROM rasa/rasa:latest
+# # Usa una imagen base de Python
+# FROM rasa/rasa:latest
 
 WORKDIR /app
 
