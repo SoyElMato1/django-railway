@@ -4,6 +4,3 @@ db.sqlite3
 
 staticfiles
 .env
-
-runtime.txt
-Procfile
